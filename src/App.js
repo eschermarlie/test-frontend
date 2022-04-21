@@ -32,14 +32,12 @@ class App extends React.Component {
               }
           })
             .then(response => {
-                console.log('response', response);
 
                 this.setState(
                     {
                         datas: response.data,
                     },
-                ).then(()=>{console.log(this.state.datas)});
-                }
+                )}
             )
             .catch(error => this.setState({ error }));
       }
@@ -55,7 +53,6 @@ class App extends React.Component {
     }
 
     submitSearch(event){
-        console.log('searching for ', this.state.searchTags);
         this.setState({
             currentPage: 1
         });
